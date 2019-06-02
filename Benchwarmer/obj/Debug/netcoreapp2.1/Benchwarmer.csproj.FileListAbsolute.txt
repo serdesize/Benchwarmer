@@ -1,0 +1,11 @@
+/Users/serdesize/Projects/Benchwarmer/Benchwarmer/bin/Debug/netcoreapp2.1/Benchwarmer.deps.json
+/Users/serdesize/Projects/Benchwarmer/Benchwarmer/bin/Debug/netcoreapp2.1/Benchwarmer.runtimeconfig.json
+/Users/serdesize/Projects/Benchwarmer/Benchwarmer/bin/Debug/netcoreapp2.1/Benchwarmer.runtimeconfig.dev.json
+/Users/serdesize/Projects/Benchwarmer/Benchwarmer/bin/Debug/netcoreapp2.1/Benchwarmer.dll
+/Users/serdesize/Projects/Benchwarmer/Benchwarmer/bin/Debug/netcoreapp2.1/Benchwarmer.pdb
+/Users/serdesize/Projects/Benchwarmer/Benchwarmer/obj/Debug/netcoreapp2.1/Benchwarmer.csprojAssemblyReference.cache
+/Users/serdesize/Projects/Benchwarmer/Benchwarmer/obj/Debug/netcoreapp2.1/Benchwarmer.csproj.CoreCompileInputs.cache
+/Users/serdesize/Projects/Benchwarmer/Benchwarmer/obj/Debug/netcoreapp2.1/Benchwarmer.AssemblyInfoInputs.cache
+/Users/serdesize/Projects/Benchwarmer/Benchwarmer/obj/Debug/netcoreapp2.1/Benchwarmer.AssemblyInfo.cs
+/Users/serdesize/Projects/Benchwarmer/Benchwarmer/obj/Debug/netcoreapp2.1/Benchwarmer.dll
+/Users/serdesize/Projects/Benchwarmer/Benchwarmer/obj/Debug/netcoreapp2.1/Benchwarmer.pdb
