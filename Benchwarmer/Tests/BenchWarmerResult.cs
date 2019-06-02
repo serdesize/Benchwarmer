@@ -1,9 +1,9 @@
 ﻿using System;
-namespace BenchWarmer
+namespace BenchWarmer.Tests
 {
     internal class BenchWarmerResult
     {
-        public long Ticks { get; set; }
+        public long ElapsedMiliseconds { get; set; }
         public string Name { get; set; }
     }
 }

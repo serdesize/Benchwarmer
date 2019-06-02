@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Text;
 
-namespace BenchWarmer
+namespace BenchWarmer.Tests
 {
     public class StructAndClass : BaseTest
     {
@@ -16,100 +15,94 @@ namespace BenchWarmer
         public override void Run()
         {
             TestStruct();
+
             TestClass();
+
             TestFinalizedClass();
+
             TestBoxingStruct();
+
             BuildResult();
         }
 
         private void TestStruct()
         {
-            var average = 10;
-            long sum = 0;
+            Watch.Restart();
             for (var i = 0; i < 10; i++)
             {
-                Watch.Restart();
                 var list = new AStruct[OneMillion];
                 for (var j = 0; j < OneMillion; j++)
                 {
                     list[i] = new AStruct(i);
                 }
-                Watch.Stop();
-                sum += Watch.ElapsedTicks;
             }
+            Watch.Stop();
 
-            _results.Add(new BenchWarmerResult { Name = "Struct" , Ticks = Watch.ElapsedTicks / average });
+            _results.Add(new BenchWarmerResult { Name = "Struct" , ElapsedMiliseconds = Watch.ElapsedMilliseconds / 10 });
         }
 
         private void TestClass()
         {
-            var average = 10;
-            long sum = 0;
+            Watch.Restart();
             for (var i = 0; i < 10; i++)
             {
-                Watch.Restart();
                 var list = new AClass[OneMillion];
                 for (var j = 0; j < OneMillion; j++)
                 {
                     list[i] = new AClass(i);
                 }
-                Watch.Stop();
-                sum += Watch.ElapsedTicks;
             }
+            Watch.Stop();
 
-            _results.Add(new BenchWarmerResult { Name = "Class", Ticks = Watch.ElapsedTicks / average });
+            _results.Add(new BenchWarmerResult { Name = "Class", ElapsedMiliseconds = Watch.ElapsedMilliseconds / 10 });
         }
 
         private void TestFinalizedClass()
         {
-            var average = 10;
-            long sum = 0;
+            Watch.Restart();
             for (var i = 0; i < 10; i++)
             {
-                Watch.Restart();
                 var list = new AClassFinalized[OneMillion];
                 for (var j = 0; j < OneMillion; j++)
                 {
                     list[i] = new AClassFinalized(i);
                 }
-                Watch.Stop();
-                sum += Watch.ElapsedTicks;
             }
+            Watch.Stop();
 
-            _results.Add(new BenchWarmerResult { Name = "Finalized Class", Ticks = Watch.ElapsedTicks / average });
+            _results.Add(new BenchWarmerResult { Name = "Finalized Class", ElapsedMiliseconds = Watch.ElapsedMilliseconds / 10 });
         }
 
         private void TestBoxingStruct()
         {
-            var average = 10;
-            long sum = 0;
+            Watch.Restart();
             for (var i = 0; i < 10; i++)
             {
-                Watch.Restart();
                 var list = new AComplexStruct[OneMillion];
                 for (var j = 0; j < OneMillion; j++)
                 {
                     list[i] = new AComplexStruct(i);
                 }
-                Watch.Stop();
-                sum += Watch.ElapsedTicks;
             }
-
-            _results.Add(new BenchWarmerResult { Name = "Boxed Struct", Ticks = Watch.ElapsedTicks / average });
+            Watch.Stop();
+             
+            _results.Add(new BenchWarmerResult { Name = "Boxed Struct", ElapsedMiliseconds = Watch.ElapsedMilliseconds / 10 });
         }
 
-        private void BuildResult()
+        public override void BuildResult()
         {
             _stringBuilder
+                .AppendLine()
+                .AppendLine()
                 .AppendLine($"********* [ {nameof(StructAndClass)} ] *********")
                 .AppendLine($"  fill list ( struct, class )")
                 .AppendLine($"  > 1 million objs")
-                .AppendLine($"  > 10 times")
+                .AppendLine($"  > average of 10 times")
                 .AppendLine();
 
             foreach (var res in _results)
             {
-                _stringBuilder.AppendLine(string.Format("{0, -15} {1, 5}ms", res.Name, res.Ticks / TimeSpan.TicksPerMillisecond));
+                _stringBuilder.AppendLine(string.Format("{0, -15} {1, 5}ms", res.Name, res.ElapsedMiliseconds));
             }
         }
 

@@ -1,4 +1,6 @@
 ﻿using System;
+using Benchwarmer.Tests;
+using BenchWarmer.Tests;
 
 namespace BenchWarmer
 {
@@ -8,6 +10,8 @@ namespace BenchWarmer
         {
             Console.WriteLine("Tests------------");
             Console.WriteLine("1: Struct & Class");
+            Console.WriteLine("2: Exceptions");
+            Console.WriteLine("Q: quit");                
 
 
             var loop = true;
@@ -21,6 +25,9 @@ namespace BenchWarmer
                 {
                     case "1":
                         test = new StructAndClass();
+                        break;
+                    case "2":
+                        test = new Exceptions();
                         break;
                     case "q":
                         loop = false;

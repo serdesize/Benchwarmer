@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace BenchWarmer
+namespace BenchWarmer.Tests
 {
     public abstract class BaseTest
     {
@@ -9,5 +9,6 @@ namespace BenchWarmer
 
         public abstract void ShowResult();
         public abstract void Run();
+        public abstract void BuildResult();
     }
 }
