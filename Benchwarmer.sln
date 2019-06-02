@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benchwarmer", "Benchwarmer\Benchwarmer.csproj", "{412F233F-09C4-4B0D-8FBE-0FC999EC8EE4}"
+EndProject
+Global
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{412F233F-09C4-4B0D-8FBE-0FC999EC8EE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{412F233F-09C4-4B0D-8FBE-0FC999EC8EE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{412F233F-09C4-4B0D-8FBE-0FC999EC8EE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{412F233F-09C4-4B0D-8FBE-0FC999EC8EE4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+EndGlobal
