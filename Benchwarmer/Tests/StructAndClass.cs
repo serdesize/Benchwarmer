@@ -15,11 +15,8 @@ namespace BenchWarmer.Tests
         public override void Run()
         {
             TestStruct();
-
             TestClass();
-
             TestFinalizedClass();
-
             TestBoxingStruct();
 
             BuildResult();
