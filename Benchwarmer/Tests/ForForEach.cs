@@ -41,13 +41,19 @@ namespace Benchwarmer.Tests
 
         private void TestFor()
         {
+            var tmp = new int[OneMillion];
+            for (var k = 0; k < OneMillion; k++)
+            {
+                tmp[k] = k;
+            }
+
             Watch.Restart();
             for (var i = 0; i < 10; i++)
             {
                 var list = new int[OneMillion];
                 for (var j = 0; j < OneMillion; j++)
                 {
-                    list[i] = j;
+                    list[i] = tmp[j];
                 }
             }
             Watch.Stop();

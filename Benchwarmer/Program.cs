@@ -12,6 +12,9 @@ namespace BenchWarmer
             Console.WriteLine("1: Struct & Class");
             Console.WriteLine("2: Exceptions");
             Console.WriteLine("3: For Foreach");
+            Console.WriteLine("4: String");
+            Console.WriteLine("5: Unsafe ptr");
+            Console.WriteLine("6: Generics");
             Console.WriteLine("Q: quit");
             Console.WriteLine();
 
@@ -31,6 +34,15 @@ namespace BenchWarmer
                         break;
                     case "3":
                         test = new ForForEach();
+                        break;
+                    case "4":
+                        test = new StringStringBuilder();
+                        break;
+                    case "5":
+                        test = new RawPointers();
+                        break;
+                    case "6":
+                        test = new GenericsConcrete();
                         break;
                     case "q":
                         loop = false;
